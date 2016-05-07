@@ -1,0 +1,134 @@
+App Idea:
+Simple activity logging app.
+
+
+Implement force touch from Springboard
+
+================================================================================================================
+
+Use cases:
+
+1) View overview graph of 
+  - all activities for certain day/week/month/year. Default view is week.
+  - filter the graph based on type
+  - view summary of day/month/year, e.g. calories burned
+
+2) View details of activities
+
+3) Log a predefined activity: 
+  - Type (squash, jog, walk, gym)
+  - Date (Today as default) 
+  - Duration
+  - How it went as a 1-10 scale
+
+4) Log in with Facebook and/or Google**
+
+
+** optional/future use case
+
+================================================================================================================  
+
+UI Structure:
+
+Overview page:
+  - X Navigate to today
+  - X Summary activites for time, e.g. number of activities, number of activity types
+  - X Be able to navigate to 'view day page'
+  - X Separate OverviewViewModel into TableViewOverviewViewModel and LineChartOverviewViewModel
+  - X Write tests for each view model
+  - √ Toggle chart presentation mode
+  - √ Segmented control controlling time
+  - √ Graph of time
+  - √ Move date and prev/next as header view
+  - √ Create footer view, e.g. "Jan   Dec"
+  - √ Bordered graph if zero activities
+  - √ Log new activity button ==> Select Activity Type page
+
+Table Overview Page:
+  - √ View activities performed during week/month/year
+  - X Click on activity ==> View Activity Page
+  - X Remove activity
+
+View Activity Page:
+  - X Edit Activity
+  - X Remove activity
+
+Log New Activity:
+- √ Presented modally
+- √ Embedded in UINavigationController
+- √ Store to database/server when completed
+- X Disable back button if on first page
+- X Show animated checkmark or similar when completed
+- X Handle failures
+
+  Select Activity Type page: 
+    - √ Collection view a cell per activity type ==> Log Activity Date Page
+
+  Log Activity Date Page:
+    - Select date and time
+    - Duration
+    - How it went
+
+
+
+
+Database:
+- Write tests for querying, writing, etc
+================================================================================================================
+
+Technologies:
+1) Support iPhone, landscape and portrait
+2) Use swift
+3) Use a functional reactional approach
+4) MVVC - model, viewmodel, controller
+5) Realm.io (lisp/erlang server eventually?) 
+6) Tests
+
+Maybe/Investigate:
+1) Fastlane
+2) Moya
+9) Separate model as own framework (Cocoapods?)
+
+
+================================================================================================================
+
+App Structure:
+
+- Database
+- Database service
+
+- Model
+- ViewModel
+
+- Avoid singletons for increased testability
+
+================================================================================================================
+
+Approach:
+Think SOLID
+  - Single responsibility (a responsibility is a reason to change, e.g. a module that compiles and prints a report. Content in report could change. Format of report could change. Should not affect each other.)
+  - Open Closed (?)
+  - Liskov substitution (?)
+  - Interface segregation (don't create general purpose interfaces. instead separate them into several specific ones)
+  - Dependency inversion (depend upon abstractions (i.e. interfaces/protocols), not upon concretetions (i.e. concrete classes))
+
+
+1) Create empty project with test suite set up
+2) Set up dependencies, such as FRP, etc
+2) Integrate Fastlane
+
+3) Dev loop:
+  3.1) Create tests for model
+  3.2) Create model
+  3.3) Create tests for business logic 
+  3.4) Implement business logic (in appropriate place)
+
+
+
+================================================================================================================
+
+Todo:
+- Conform view controllers to 'BaseReactiveViewController'
+- Refactor logic into Categories/Handlers
+- Configure appearance
+- Implement FRP (signals and such)

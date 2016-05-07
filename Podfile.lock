@@ -1,0 +1,39 @@
+PODS:
+  - APSlidableTabPageController (1.0.2)
+  - JBChartView (2.9.1)
+  - ReactiveCocoa (4.0.0-RC.1):
+    - ReactiveCocoa/UI (= 4.0.0-RC.1)
+    - Result (~> 1.0)
+  - ReactiveCocoa/Core (4.0.0-RC.1):
+    - ReactiveCocoa/no-arc
+    - Result (~> 1.0)
+  - ReactiveCocoa/no-arc (4.0.0-RC.1):
+    - Result (~> 1.0)
+  - ReactiveCocoa/UI (4.0.0-RC.1):
+    - ReactiveCocoa/Core
+    - Result (~> 1.0)
+  - Realm (0.98.1):
+    - Realm/Headers (= 0.98.1)
+  - Realm/Headers (0.98.1)
+  - RealmSwift (0.98.1):
+    - Realm (= 0.98.1)
+  - Result (1.0.2)
+  - Timepiece (0.4.2)
+
+DEPENDENCIES:
+  - APSlidableTabPageController (= 1.0.2)
+  - JBChartView (= 2.9.1)
+  - ReactiveCocoa (= 4.0.0-RC.1)
+  - RealmSwift
+  - Timepiece
+
+SPEC CHECKSUMS:
+  APSlidableTabPageController: da6e3def8cc6801c530c119c0ccd275623f134ea
+  JBChartView: ca18e487c3d3ee68753716d41b260106e2859f63
+  ReactiveCocoa: 2b0f654beb7642b82cfd3fdb845205ae9889422c
+  Realm: ca4a4122e939e228e10694fc49011386cb2ecb07
+  RealmSwift: 7d3c7033427816a2c3417ba0d004d694987e503a
+  Result: dd3dd71af3fa2e262f1a999e14fba2c25ec14f16
+  Timepiece: cf53bb908bf542acc0e3d5f69cabfed869df4ebd
+
+COCOAPODS: 0.39.0
