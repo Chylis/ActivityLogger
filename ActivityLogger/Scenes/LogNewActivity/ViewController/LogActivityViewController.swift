@@ -8,6 +8,7 @@
 
 import UIKit
 import GLKit
+import Swiftilities
 
 protocol ActivityLoggerDelegate {
     var activityModel: ActivityModel { get set }
@@ -66,12 +67,12 @@ class LogActivityViewController: CubeContainerViewController, ActivityLoggerDele
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .Rewind,
             target: self,
-            action: "leftBarButtonTapped:")
+            action: #selector(LogActivityViewController.leftBarButtonTapped(_:)))
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             barButtonSystemItem: .Cancel,
             target: self,
-            action: "rightBarButtonTapped:")
+            action: #selector(LogActivityViewController.rightBarButtonTapped(_:)))
     }
     
     
@@ -80,7 +81,7 @@ class LogActivityViewController: CubeContainerViewController, ActivityLoggerDele
     //MARK: IBActions
     
     func rightBarButtonTapped(sender: AnyObject) {
-        dismissAnimated()
+        dismiss()
     }
     
     func leftBarButtonTapped(sender: AnyObject) {
@@ -115,7 +116,7 @@ class LogActivityViewController: CubeContainerViewController, ActivityLoggerDele
     private func completeActivityLogging() {
         let success = activityModel.write()
         if success {
-            dismissAnimated()
+            dismiss()
         } else {
             fatalError("Failed to save activity!")
         }

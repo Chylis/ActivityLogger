@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		034A223339227A8B1FEB1776 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE066C9FD05ECFDA9AAE910B /* Pods.framework */; };
+		5F17A25A1CF8EA36009AEB21 /* Swiftilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F17A2581CF8EA28009AEB21 /* Swiftilities.framework */; };
+		5F17A25B1CF8EA36009AEB21 /* Swiftilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5F17A2581CF8EA28009AEB21 /* Swiftilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5F2CAE641C282AFB00C477F8 /* NSDateAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2CAE631C282AFB00C477F8 /* NSDateAdditions.swift */; };
 		5F2CAE661C282AFB00C477F8 /* NSDateAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2CAE631C282AFB00C477F8 /* NSDateAdditions.swift */; };
 		5F2CAE691C28391600C477F8 /* NSDateAdditionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2CAE681C28391600C477F8 /* NSDateAdditionsTests.swift */; };
-		5F3D5F251C2853F200606D1C /* UIViewAnimationAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D5F241C2853F200606D1C /* UIViewAnimationAdditions.swift */; };
-		5F3D5F271C2853F200606D1C /* UIViewAnimationAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D5F241C2853F200606D1C /* UIViewAnimationAdditions.swift */; };
 		5F3D5F291C28594600606D1C /* ActivityOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D5F281C28594600606D1C /* ActivityOverviewViewModel.swift */; };
 		5F3D5F2B1C28594600606D1C /* ActivityOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F3D5F281C28594600606D1C /* ActivityOverviewViewModel.swift */; };
 		5F4498981C74B863007D5EBC /* BaseOverviewPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F4498971C74B863007D5EBC /* BaseOverviewPresentationController.swift */; };
@@ -65,8 +65,6 @@
 		5FB1DFA21C340AD000092181 /* SelectActivityTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB1DF9F1C340AD000092181 /* SelectActivityTypeCollectionViewCell.swift */; };
 		5FC7DE1F1C32B722000BE39B /* ActivityOverviewBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC7DE1E1C32B722000BE39B /* ActivityOverviewBarView.swift */; };
 		5FC7DE211C32B722000BE39B /* ActivityOverviewBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FC7DE1E1C32B722000BE39B /* ActivityOverviewBarView.swift */; };
-		5FD4258C1C330B8B007D4D36 /* UIViewNibAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD4258B1C330B8B007D4D36 /* UIViewNibAdditions.swift */; };
-		5FD4258E1C330B8B007D4D36 /* UIViewNibAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD4258B1C330B8B007D4D36 /* UIViewNibAdditions.swift */; };
 		5FFB871A1C71E7F70025BF8F /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB87191C71E7F70025BF8F /* DatabaseService.swift */; };
 		5FFB871C1C71E7F70025BF8F /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB87191C71E7F70025BF8F /* DatabaseService.swift */; };
 		5FFB871E1C71EBE20025BF8F /* ManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FFB871D1C71EBE20025BF8F /* ManagedObject.swift */; };
@@ -90,10 +88,24 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		5F17A25C1CF8EA36009AEB21 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5F17A25B1CF8EA36009AEB21 /* Swiftilities.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		5F17A2581CF8EA28009AEB21 /* Swiftilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Swiftilities.framework; sourceTree = "<group>"; };
 		5F2CAE631C282AFB00C477F8 /* NSDateAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateAdditions.swift; sourceTree = "<group>"; };
 		5F2CAE681C28391600C477F8 /* NSDateAdditionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateAdditionsTests.swift; sourceTree = "<group>"; };
-		5F3D5F241C2853F200606D1C /* UIViewAnimationAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewAnimationAdditions.swift; sourceTree = "<group>"; };
 		5F3D5F281C28594600606D1C /* ActivityOverviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityOverviewViewModel.swift; sourceTree = "<group>"; };
 		5F4498971C74B863007D5EBC /* BaseOverviewPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOverviewPresentationController.swift; sourceTree = "<group>"; };
 		5F44989B1C74C1EB007D5EBC /* BaseReactiveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseReactiveViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +143,6 @@
 		5FB1DF9B1C340A0000092181 /* SelectActivityTypeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectActivityTypeViewModel.swift; sourceTree = "<group>"; };
 		5FB1DF9F1C340AD000092181 /* SelectActivityTypeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectActivityTypeCollectionViewCell.swift; sourceTree = "<group>"; };
 		5FC7DE1E1C32B722000BE39B /* ActivityOverviewBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityOverviewBarView.swift; sourceTree = "<group>"; };
-		5FD4258B1C330B8B007D4D36 /* UIViewNibAdditions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewNibAdditions.swift; sourceTree = "<group>"; };
 		5FFB87191C71E7F70025BF8F /* DatabaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 		5FFB871D1C71EBE20025BF8F /* ManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagedObject.swift; sourceTree = "<group>"; };
 		861612F10144D48315CAFC21 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +155,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F17A25A1CF8EA36009AEB21 /* Swiftilities.framework in Frameworks */,
 				5FAEDA1D1C2983F4004125DE /* JBChartView.framework in Frameworks */,
 				5FAEDA1E1C2983F4004125DE /* Pods.framework in Frameworks */,
 				5FAEDA1F1C2983F4004125DE /* ReactiveCocoa.framework in Frameworks */,
@@ -185,8 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				5F2CAE631C282AFB00C477F8 /* NSDateAdditions.swift */,
-				5F3D5F241C2853F200606D1C /* UIViewAnimationAdditions.swift */,
-				5FD4258B1C330B8B007D4D36 /* UIViewNibAdditions.swift */,
 				5F685C941C3577A900C7AD6B /* UIStoryboardActivityLoggerAdditions.swift */,
 				5F4E8C2E1C369FF0000EED11 /* UIViewControllerUtilityAdditions.swift */,
 			);
@@ -221,6 +231,7 @@
 		5F94C2641C2591A900BB1893 = {
 			isa = PBXGroup;
 			children = (
+				5F17A2581CF8EA28009AEB21 /* Swiftilities.framework */,
 				5F94C26F1C2591A900BB1893 /* ActivityLogger */,
 				5F94C2841C2591A900BB1893 /* ActivityLoggerTests */,
 				5F94C28F1C2591A900BB1893 /* ActivityLoggerUITests */,
@@ -489,6 +500,7 @@
 				5F94C26B1C2591A900BB1893 /* Resources */,
 				29986EFA7AD16E11EED37401 /* Embed Pods Frameworks */,
 				5BC35277B69D8F426521AE9E /* Copy Pods Resources */,
+				5F17A25C1CF8EA36009AEB21 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -715,7 +727,6 @@
 				5F4E8C431C3AE36D000EED11 /* SelectActivityDateViewModel.swift in Sources */,
 				5F4E8C2F1C369FF0000EED11 /* UIViewControllerUtilityAdditions.swift in Sources */,
 				5FB1DFA01C340AD000092181 /* SelectActivityTypeCollectionViewCell.swift in Sources */,
-				5F3D5F251C2853F200606D1C /* UIViewAnimationAdditions.swift in Sources */,
 				5F4498A01C74CAA5007D5EBC /* ActivityOverviewTableViewCell.swift in Sources */,
 				5FA747C61C280E7900C5386C /* ActivityModel.swift in Sources */,
 				5FFB871E1C71EBE20025BF8F /* ManagedObject.swift in Sources */,
@@ -732,7 +743,6 @@
 				5F685C911C354AEB00C7AD6B /* CubeContainerViewController.swift in Sources */,
 				5FB1DF9C1C340A0000092181 /* SelectActivityTypeViewModel.swift in Sources */,
 				5F4E8C3F1C3AE138000EED11 /* SelectActivityDateViewController.swift in Sources */,
-				5FD4258C1C330B8B007D4D36 /* UIViewNibAdditions.swift in Sources */,
 				5FC7DE1F1C32B722000BE39B /* ActivityOverviewBarView.swift in Sources */,
 				5F3D5F291C28594600606D1C /* ActivityOverviewViewModel.swift in Sources */,
 				5FA747C21C280DE300C5386C /* OverviewContainerViewController.swift in Sources */,
@@ -756,7 +766,6 @@
 				5F4E8C451C3AE36D000EED11 /* SelectActivityDateViewModel.swift in Sources */,
 				5F4E8C311C369FF0000EED11 /* UIViewControllerUtilityAdditions.swift in Sources */,
 				5FB1DFA21C340AD000092181 /* SelectActivityTypeCollectionViewCell.swift in Sources */,
-				5F3D5F271C2853F200606D1C /* UIViewAnimationAdditions.swift in Sources */,
 				5F4498A21C74CAA5007D5EBC /* ActivityOverviewTableViewCell.swift in Sources */,
 				5FA747C81C280E7900C5386C /* ActivityModel.swift in Sources */,
 				5FFB87201C71EBE20025BF8F /* ManagedObject.swift in Sources */,
@@ -773,7 +782,6 @@
 				5F685C931C354AEB00C7AD6B /* CubeContainerViewController.swift in Sources */,
 				5FB1DF9E1C340A0000092181 /* SelectActivityTypeViewModel.swift in Sources */,
 				5F4E8C411C3AE138000EED11 /* SelectActivityDateViewController.swift in Sources */,
-				5FD4258E1C330B8B007D4D36 /* UIViewNibAdditions.swift in Sources */,
 				5FC7DE211C32B722000BE39B /* ActivityOverviewBarView.swift in Sources */,
 				5F3D5F2B1C28594600606D1C /* ActivityOverviewViewModel.swift in Sources */,
 				5FA747C41C280DE300C5386C /* OverviewContainerViewController.swift in Sources */,
@@ -901,6 +909,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = ActivityLogger/Info.plist;
@@ -923,6 +932,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/build/Debug-iphoneos",
+					"$(PROJECT_DIR)",
 				);
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = ActivityLogger/Info.plist;

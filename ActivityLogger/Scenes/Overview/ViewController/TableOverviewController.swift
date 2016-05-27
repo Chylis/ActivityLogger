@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Swiftilities
 
 class TableOverviewController: BaseOverviewPresentationController {
     
@@ -16,7 +17,7 @@ class TableOverviewController: BaseOverviewPresentationController {
     
     //MARK: Private
     
-    private var dataSource: [ (String, [ActivityModel]) ] = []
+    private var dataSource: [ (title: String, activities: [ActivityModel]) ] = []
     
     //MARK: Overridden
     
@@ -27,7 +28,7 @@ class TableOverviewController: BaseOverviewPresentationController {
     override func reloadData() {
         dataSource = viewModel.tableViewDataSourceForCurrentViewState()
         tableView.reloadData()
-        tableView.addTransitionAnimation()
+        tableView.animateTransition()
     }
 }
 
@@ -41,13 +42,11 @@ extension TableOverviewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        let (title, _) = dataSource[section]
-        return title
+        return dataSource[section].title
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let (_, activities) = dataSource[section]
-        return activities.count
+        return dataSource[section].activities.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -58,7 +57,7 @@ extension TableOverviewController: UITableViewDataSource {
     }
     
     private func configureCell(cell: ActivityOverviewTableViewCell, indexPath: NSIndexPath) {
-        let (_, activities) = dataSource[indexPath.section]
+        let activities = dataSource[indexPath.section].activities
         let activity = activities[indexPath.row]
         cell.textLabel?.text = viewModel.titleForActivity(activity)
     }

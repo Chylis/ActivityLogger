@@ -1,0 +1,10 @@
+framework module Swiftilities {
+  umbrella header "Swiftilities.h"
+
+  export *
+  module * { export * }
+}
+
+module Swiftilities.Swift {
+    header "Swiftilities-Swift.h"
+}

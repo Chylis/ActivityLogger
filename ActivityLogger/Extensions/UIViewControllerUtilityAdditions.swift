@@ -13,8 +13,4 @@ extension UIViewController {
     func isInLandscapeOrientation() -> Bool {
         return UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication().statusBarOrientation)
     }
-    
-    func dismissAnimated() {
-        presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
-    }
 }

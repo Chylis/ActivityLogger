@@ -8,6 +8,7 @@
 
 import UIKit
 import JBChartView
+import Swiftilities
 
 
 enum LineViewDataSourceIndexMapper: Int {
@@ -50,7 +51,7 @@ class LineOverviewController: BaseOverviewPresentationController {
         leftFooterLabel.text = viewModel.leftFooterLabelText()
         rightFooterLabel.text = viewModel.rightFooterLabelText()
         contentView.reloadData()
-        contentView.addTransitionAnimation()
+        contentView.animateTransition()
     }
 }
 

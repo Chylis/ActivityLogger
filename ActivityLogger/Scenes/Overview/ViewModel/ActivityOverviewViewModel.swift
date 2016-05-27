@@ -29,7 +29,7 @@ struct ActivityOverviewViewModel {
         - Key: String: representing the formatted section header of the date
         - Value: [ActivityModel]: Array of activities that belong to the key date
     */
-    func tableViewDataSourceForCurrentViewState() -> [ (String, [ActivityModel]) ] {
+    func tableViewDataSourceForCurrentViewState() -> [ (title:String, activities:[ActivityModel]) ] {
         let dateRangeForCurrentViewState = 0..<viewState.value.numberOfUnitsInDate(selectedDate.value)
 
         if viewState.value == .Year {

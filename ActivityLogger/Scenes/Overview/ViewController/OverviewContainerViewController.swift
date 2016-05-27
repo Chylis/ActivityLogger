@@ -8,6 +8,7 @@
 
 import UIKit
 import APSlidableTabPageController
+import Swiftilities
 
 class OverviewContainerViewController: BaseOverviewPresentationController {
     
@@ -28,7 +29,7 @@ class OverviewContainerViewController: BaseOverviewPresentationController {
         
     override func setupUI() {
         setupContentControllers()
-        populateContentViewWithController(slidableTabPageController!)
+        performAddChildViewController(slidableTabPageController!, parentView: contentContainerView)
     }
     
     /**
@@ -110,18 +111,5 @@ class OverviewContainerViewController: BaseOverviewPresentationController {
         slidableTabPageController = HorizontalContainerCreator.horizontalContainerWithViewControllers([lineVc, listVc])
         slidableTabPageController?.indexBarTextColor = UIColor.blackColor()
         slidableTabPageController?.indexBarHighlightedTextColor = view.tintColor
-    }
-    
-    private func populateContentViewWithController(viewController: UIViewController) {
-        self.addChildViewController(viewController)
-        contentContainerView.addSubview(viewController.view)
-        viewController.view.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activateConstraints([
-            contentContainerView.leadingAnchor.constraintEqualToAnchor(viewController.view.leadingAnchor),
-            contentContainerView.trailingAnchor.constraintEqualToAnchor(viewController.view.trailingAnchor),
-            contentContainerView.topAnchor.constraintEqualToAnchor(viewController.view.topAnchor),
-            contentContainerView.bottomAnchor.constraintEqualToAnchor(viewController.view.bottomAnchor)
-            ])
-        viewController.didMoveToParentViewController(self)
     }
 }
